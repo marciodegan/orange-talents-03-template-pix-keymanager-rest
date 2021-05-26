@@ -38,11 +38,17 @@ dependencies {
     testImplementation("io.micronaut:micronaut-http-client")
 
     implementation(group: 'org.hibernate', name: 'hibernate-validator', version: '6.1.6.Final')
-//    compile 'io.micronaut.configuration:micronaut-hibernate-validator'
 
-
+    // Tests
+    kaptTest "io.micronaut:micronaut-inject-java"
+    testAnnotationProcessor("io.micronaut:micronaut-inject-java")
+    testImplementation("org.mockito:mockito-core:3.8.0")
+    testImplementation("org.mockito:mockito-junit-jupiter:3.8.0")
+    testImplementation("com.h2database:h2")
+    testImplementation("org.hamcrest:hamcrest-core:2.2")
+    testImplementation("org.testcontainers:junit-jupiter")
+    testImplementation("org.mockito:mockito-inline:3.8.0") // p/ poder fazer o replaces na factory do mock
 }
-
 
 application {
     mainClass.set("br.com.zup.edu.ApplicationKt")

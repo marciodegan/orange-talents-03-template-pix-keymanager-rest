@@ -21,7 +21,7 @@ class RegistraChavePixController(
     @Post("/pix")
     fun registra(clienteId: UUID, @Body @Valid request: NovaChaveRequest): HttpResponse<Any> {
 
-        LOGGER.info("\n  ${clienteId} | ${request.tipoChave} | ${request.tipoConta} | ${request.chave}")
+        LOGGER.info("\n request => clientid: ${clienteId} | tipoChave: ${request.tipoChave} | tipoConta: ${request.tipoConta} | chave: ${request.chave}")
 
         val grpcResponse = registraChavePixClient.registra(request.toGrpcModel(clienteId))
 
