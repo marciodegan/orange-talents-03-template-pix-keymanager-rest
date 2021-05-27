@@ -1,17 +1,12 @@
 package br.com.zup.edu.remove
 
-import br.com.zup.edu.KeyManagerRegistraGrpcServiceGrpc
 import br.com.zup.edu.KeyManagerRemoveGrpcServiceGrpc
-import br.com.zup.edu.NovaChaveRequest
 import br.com.zup.edu.RemoveChavePixRequest
 import io.micronaut.http.HttpResponse
-import io.micronaut.http.annotation.Body
 import io.micronaut.http.annotation.Controller
 import io.micronaut.http.annotation.Delete
-import io.micronaut.http.annotation.Post
 import org.slf4j.LoggerFactory
 import java.util.*
-import javax.validation.Valid
 
 @Controller("/api/v1/clientes/{clienteId}")
 class RemoveChavePixController(
